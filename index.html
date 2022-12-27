@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="actions">
+      <div class="title">Actions</div>
+      <div class="spacer"></div>
+      <button onclick="writeToDoc()">Write to document</button>
+      <button onclick="toggleImg()" id="image-controller">show image</button>
+      <button onclick="disableCombo()" id="combobox-controller">
+        Disable combo box
+      </button>
+      <button onclick="createBoxes()">create text boxes</button>
+      <button onclick="removeOption()">remove combo box option</button>
+      <div class="spacer"></div>
+    </div>
+    <div class="info">
+      <div class="title">Info</div>
+      <div class="spacer"></div>
+      <a href="https://google.com">Google</a>
+      <select name="combo box">
+        <option value="ahmad">ahmad</option>
+        <option value="ali">ali</option>
+        <option value="waleed">waleed</option>
+        <option value="naser">naser</option>
+        <option value="omar">omar</option>
+      </select>
+      <div class="spacer"></div>
+    </div>
+    <div class="image">
+      <img src="images/image.jpg" alt="arabian nature" class="hide-img" />
+    </div>
+  </body>
+</html>

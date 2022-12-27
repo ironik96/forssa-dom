@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.actions,
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  flex-basis: 50%;
+  align-items: center;
+}
+.actions {
+  overflow-y: auto;
+}
+.spacer {
+  flex-grow: 1;
+}
+.title {
+  font-size: xx-large;
+  font-weight: bold;
+}
+button {
+  background-color: hsl(219, 79%, 66%);
+  color: whitesmoke;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+button:hover {
+  background-color: hsl(219, 79%, 36%);
+}
+.image {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150px, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+.image:has(.hide-img) {
+  visibility: hidden;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  transition: 0.2s all ease-in;
+}
+
+.hide-img {
+  opacity: 0;
+  scale: 0.3;
+}
+.show-img {
+  opacity: 1;
+  scale: 1;
+}
+select {
+  padding: 15px 30px;
+  border-radius: 15px;
+  background-color: hsl(219, 79%, 66%);
+  border: none;
+  color: white;
+}
+select:disabled {
+  background-color: gainsboro;
+}
+#user-input {
+  position: relative;
+  border: 1px solid lightsteelblue;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+#user-input::before {
+  content: "Your write up:";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: max-content;
+  transform: translate(-50%, calc(-100% - 5px));
+  font-weight: bold;
+  color: hsl(195, 53%, 39%);
+}
